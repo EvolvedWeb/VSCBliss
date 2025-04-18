@@ -1,0 +1,71 @@
+{
+  "name": "VSCBliss",
+  "displayName": "VSCBliss",
+  "description": "Convert concatenated strings to template literals and other helpful string utilities.",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "icon": "VSCBliss.png",
+  "engines": {
+    "vscode": "^1.87.0",
+    "node": ">=18.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscBliss.convertToTemplateLiteral"
+  ],
+  "main": "./src/extension.js",
+  "preLaunchTask": "npm: build",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscBliss.convertToTemplateLiteral",
+        "title": "Convert to Template Literal",
+        "category": "VSCBliss"
+      },
+      {
+        "command": "vscBliss.jsonToJsSingle",
+        "title": "Convert JSON to JS Object (single quotes)",
+        "category": "VSCBliss"
+      },
+      {
+        "command": "vscBliss.jsonToJsDouble",
+        "title": "Convert JSON to JS Object (double quotes)",
+        "category": "VSCBliss"
+      }
+    ],
+    "configuration": {
+      "title": "VSCBliss",
+      "properties": {
+        "vscBliss.format.multiline": {
+          "type": "boolean",
+          "default": true,
+          "description": "Format output as multi-line JavaScript instead of one-liner."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "package": "vsce package",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "files": [
+    "src",
+    "test",
+    "eslint.config.js",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.99.1",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.24.0",
+    "mocha": "^11.1.0",
+    "vsce": "^2.15.0"
+  }
+}
