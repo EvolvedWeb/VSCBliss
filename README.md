@@ -1,10 +1,3 @@
-Absolutely — here is the updated, professional `README.md` file for **VSCBliss**, reflecting both the `Convert to Template Literal` and `JSON to JS Object` commands with the correct details and config options.
-
----
-
-## 📄 `README.md`
-
-```markdown
 # VSCBliss
 
 VSCBliss is a set of lightweight, developer-friendly tools designed to enhance your JavaScript and JSON editing experience directly within Visual Studio Code. It offers intelligent formatting and conversion commands with minimal configuration.
